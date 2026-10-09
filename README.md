@@ -1,17 +1,8 @@
-# Boletería El Chaplin
+Boletería El Chaplin
 
-Aplicación web de cine migrada de HTML/CSS a Spring Boot, JSP, JDBC y H2, siguiendo la organización del proyecto `sist-web-springboot`.
+http://localhost:8087`.
 
-## Requisitos y ejecución
-
-- Java 17+
-- Maven (o Maven Wrapper incluido)
-
-En Windows, ejecutar `mvnw.cmd spring-boot:run` desde esta carpeta. La aplicación queda disponible en `http://localhost:8087`.
-
-La base H2 se crea en `data/boleteria`. La consola está en `http://localhost:8087/h2-console` con JDBC URL `jdbc:h2:file:./data/boleteria`, usuario `sa` y contraseña vacía.
-
-## Flujo disponible
+`http://localhost:8087/h2-console` con JDBC URL `jdbc:h2:file:./data/boleteria`, usuario `sa` y contraseña vacía.
 
 - Cartelera con los afiches originales, registro e inicio de sesión.
 - Consulta de funciones, selección de butacas, control de asientos ocupados y confirmación de pedidos.
@@ -19,7 +10,6 @@ La base H2 se crea en `data/boleteria`. La consola está en `http://localhost:80
 - Panel administrador con métricas, registro de películas y programación de funciones; también lista pedidos y consultas.
 - Formulario de consultas/sugerencias.
 
-## Organización por capas
 
 - Paquetes de dominio (`usuario`, `pelicula`, `funcion`, `asiento`, `venta` y `consulta`) con sus modelos.
 - `controller`: controladores web separados para navegación, películas, pedidos, consultas y administración. Atienden rutas y preparan los datos que necesitan las vistas JSP.
